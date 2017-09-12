@@ -1,2 +1,12 @@
 message:
+  greetings: Hello Default
+---
+spring:
+  profiles: development
+message:
   greetings: Hello Dev
+---
+spring:
+  profiles: production
+message:
+  greetings: Hello Prod
