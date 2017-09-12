@@ -10,4 +10,4 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
 custom
-    value: Saibal
+    value: Saibal Ghosh
