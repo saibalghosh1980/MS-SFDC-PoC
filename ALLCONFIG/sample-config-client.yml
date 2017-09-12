@@ -1,17 +1,2 @@
-spring:
-  profiles:
-    active: "prod"
-    
----
-
-spring:
-  profiles: prod
-message:
-  greetings: Hello Prod
-  
----
-
-spring:
-  profiles: dev
 message:
   greetings: Hello Dev
