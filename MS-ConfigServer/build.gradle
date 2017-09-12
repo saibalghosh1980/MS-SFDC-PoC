@@ -26,6 +26,12 @@ ext {
 	springCloudVersion = 'Dalston.SR3'
 }
 
+bootRun {
+  if ( project.hasProperty('springDebug') ) {
+      args '--debug'
+  }
+}
+
 dependencies {
 	compile('org.springframework.cloud:spring-cloud-config-server')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
