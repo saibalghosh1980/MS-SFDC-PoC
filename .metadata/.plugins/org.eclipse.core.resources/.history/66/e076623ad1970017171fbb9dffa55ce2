@@ -1,0 +1,13 @@
+---
+server:
+  port: 8001
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: D:/SKG/JAVA_DEVELOPMENT/SFDC-POC-DEV
+          searchPaths: ALLCONFIG
+management:
+  security:
+    enabled: false

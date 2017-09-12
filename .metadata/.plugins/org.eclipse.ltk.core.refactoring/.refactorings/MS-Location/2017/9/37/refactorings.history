@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;MS-Location&apos;&#x0D;&#x0A;- Original project: &apos;MS-Location&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     MS-Location/src/main/resources/templates&#x0D;&#x0A;     static&#x0D;&#x0A;     application.properties" description="Delete elements" element1="src/main/resources/static" element2="src/main/resources/application.properties" element3="/src\/main\/resources&lt;templates" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="2" stamp="1505232899008" subPackages="false" version="1.0"/>
+</session>
