@@ -9,4 +9,4 @@ message:
 spring:
   profiles: production
 message:
-  greetings: Hello Prod
+  greetings: Hello Prod123
