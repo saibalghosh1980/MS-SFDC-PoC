@@ -1,0 +1,12 @@
+package com.cts.ms.location.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.stereotype.Repository;
+
+import com.cts.ms.location.dao.LocationConfig;
+
+@Repository("springManagedLocationConfigRepository")
+public interface LocationConfigRepository extends JpaRepository<LocationConfig,String>{
+
+}

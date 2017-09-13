@@ -1,0 +1,29 @@
+server:
+  port: 8003 
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8001
+  application:
+    name: ms-location
+  datasource:
+    url: jdbc:postgresql://localhost:5432/SFDC-POC?searchpath=Location
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    tomcat:
+      max-active: 5
+      validation-query: select 1
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        show_sql: true
+        format_sql: true
+management:
+  security:
+    enabled: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

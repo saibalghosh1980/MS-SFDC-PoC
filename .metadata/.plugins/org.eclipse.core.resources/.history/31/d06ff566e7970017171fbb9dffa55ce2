@@ -1,0 +1,15 @@
+package com.cts.ms.location.controller;
+
+import java.util.List;
+
+import com.cts.ms.location.bo.LocationConfigBO;
+
+public class LoctionConfigController {
+	
+    public List<LocationConfigBO> getAllConfig() throws Exception{
+    	List<LocationConfigBO> allConfigs=new ArrayList<LocationConfigBO>();
+    	return new List<LocationConfigBO>(0);
+		
+	}
+
+}

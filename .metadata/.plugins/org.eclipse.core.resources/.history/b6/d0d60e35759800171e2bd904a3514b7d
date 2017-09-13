@@ -1,0 +1,44 @@
+package com.cts.ms.location.dao;
+
+import java.io.Serializable;
+import javax.persistence.*;
+import java.sql.Array;
+
+
+/**
+ * The persistent class for the "LOCATION_CONFIG" database table.
+ * 
+ */
+@Entity
+@Table(name="\"LOCATION_CONFIG\"")
+@NamedQuery(name="LocationConfig.findAll", query="SELECT l FROM LocationConfig l")
+public class LocationConfig implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@Column(name="\"LOCAION_ID\"")
+	private String locaionId;
+
+	@Column(name="\"STATUS\"")
+	private Array status;
+
+	public LocationConfig() {
+	}
+
+	public String getLocaionId() {
+		return this.locaionId;
+	}
+
+	public void setLocaionId(String locaionId) {
+		this.locaionId = locaionId;
+	}
+
+	public Array getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(Array status) {
+		this.status = status;
+	}
+
+}

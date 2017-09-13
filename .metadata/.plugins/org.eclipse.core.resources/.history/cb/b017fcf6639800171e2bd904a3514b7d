@@ -1,0 +1,5 @@
+package com.cts.ms.location.constants;
+
+public enum LocationConfigSattus {
+
+}

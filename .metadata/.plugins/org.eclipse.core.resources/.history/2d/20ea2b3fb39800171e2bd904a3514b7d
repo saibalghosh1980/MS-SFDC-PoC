@@ -1,0 +1,30 @@
+server:
+  port: 8003 
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8001
+  application:
+    name: ms-location
+  datasource:
+    url: jdbc:mysql://localhost:3306/sfdc-poc
+    username: root
+    password: root123
+    driver-class-name: com.mysql.jdbc.Driver
+    tomcat:
+      max-active: 5
+      validation-query: select 1
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+management:
+  security:
+    enabled: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

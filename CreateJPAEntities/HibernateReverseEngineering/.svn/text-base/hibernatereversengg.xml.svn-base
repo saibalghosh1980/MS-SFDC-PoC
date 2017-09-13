@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="HIBERNATE_REVERSE_ENGINEERING" default="ALL" basedir=".">
+    <!--Set the CLASSPATH-->
+    <path id="project.class.path">
+        <fileset dir="../ThirdPartyLibs">
+            <include name="**/*.jar"/>
+        </fileset>
+        <fileset dir="../jacobe">
+            <include name="**/*.jar"/>
+        </fileset>
+        <fileset dir="../HibernateTools">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+    <taskdef name="jacobe" classname="com.tiobe.jacobe.JacobeTask" classpathref="project.class.path"/>
+    <taskdef name="hibernatetool" classname="org.hibernate.tool.ant.HibernateToolTask"
+             classpathref="project.class.path"/>
+    <target name="DELETE_THE_DIR">
+        <delete dir="${basedir}/src"/>
+    </target>
+    <target name="CREATE_THE_DIR" depends="DELETE_THE_DIR">
+        <mkdir dir="${basedir}/src"/>
+    </target>
+
+    <target name="reveng.hbmxml" description="Produces XML mapping files in src directory" depends="CREATE_THE_DIR">
+        <hibernatetool destdir="${basedir}/src">
+            <!--The packagename depicts the place where .hbm.xml files will be created-->
+            <jdbcconfiguration propertyfile="${basedir}/databaseconfig.properties"
+                               packagename="com.perceptive.executivedashboard.hibernate.pojo"
+                               revengfile="hibernate.reveng.xml"/>
+            <hbm2hbmxml/>
+            <!-- Export Hibernate XML files -->
+            <hbm2cfgxml/>
+            <!-- Export a hibernate.cfg.xml file -->
+        </hibernatetool>
+    </target>
+    <!--BUILD THE POJOS FROM THE CONFIGURATION FILE-->
+    <target name="CREATE_POJO" depends="reveng.hbmxml">
+        <hibernatetool destdir="${basedir}/src">
+            <!--The packagename depicts the place where .hbm.xml files will be created-->
+            <jdbcconfiguration propertyfile="${basedir}/databaseconfig.properties"
+                               packagename="com.perceptive.executivedashboard.hibernate.pojo"
+                               revengfile="hibernate.reveng.xml"/>
+
+            <hbm2java jdk5="true" ejb3="false"/>
+        </hibernatetool>
+
+    </target>
+    <target name="FORMAT_POJO" depends="CREATE_POJO">
+        <jacobe input="${basedir}/src"
+                cfg="sun.cfg" javadoc="private" quiet="false" nobackup="true"/>
+    </target>
+
+    <target name="ALL" depends="FORMAT_POJO">
+        <copy todir="../src" overwrite="true" verbose="true">
+            <fileset dir="./src">
+                <exclude name="**/*.jacobe"/>
+            </fileset>
+        </copy>
+        <move file="../src/hibernate.cfg.xml" todir="../src/com/perceptive/executivedashboard/resources"/>
+        <!--
+        <delete file="../src/hibernate.cfg.xml" failonerror="false"/>
+        <copy file="./src/hibernate.cfg.xml" todir="../web/WEB-INF/" force="true" overwrite="true"/>
+        -->
+        <echo>Build Successfull</echo>
+    </target>
+
+</project>

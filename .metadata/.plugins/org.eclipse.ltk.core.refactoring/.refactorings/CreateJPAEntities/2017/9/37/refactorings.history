@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;LocationConfig.java&apos; to &apos;MS-Location/src/main/java/com.cts.ms.location.dao&apos;&#x0D;&#x0A;- Original project: &apos;CreateJPAEntities&apos;&#x0D;&#x0A;- Destination element: &apos;MS-Location/src/main/java/com.cts.ms.location.dao&apos;&#x0D;&#x0A;- Original element: &apos;com.cts.ms.location.dao.LocationConfig.java&apos;" description="Copy compilation unit" destination="=MS-Location/src\/main\/java&lt;com.cts.ms.location.dao" element1="/src&lt;com.cts.ms.location.dao{LocationConfig.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1505299956263" units="1" version="1.0"/>
+</session>

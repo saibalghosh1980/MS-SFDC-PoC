@@ -1,0 +1,30 @@
+package com.cts.ms.location.bl;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
+import com.cts.ms.location.bo.LocationConfigBO;
+import com.cts.ms.location.repository.LocationConfigRepository;
+
+@Service("springManagedLocationConfigBL")
+public class LocationConfigBL {
+
+	@Autowired
+	@Qualifier("springManagedLocationConfigRepository")
+	private LocationConfigRepository locatiionConfigBL;
+
+	public ArrayList<LocationConfigBO> getAllLocationConfig() throws Exception {
+		ArrayList<LocationConfigBO> allConfigs = new ArrayList<LocationConfigBO>();
+		try {
+			locatiionConfigBL.findAll()
+					.forEach(l -> allConfigs.add(new LocationConfigBO(l.getId(), l.getSattus())));			
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			throw ex;
+		}
+		return allConfigs;
+	}
+
+}

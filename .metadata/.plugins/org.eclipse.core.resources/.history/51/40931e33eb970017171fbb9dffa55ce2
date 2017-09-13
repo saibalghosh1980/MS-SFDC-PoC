@@ -1,0 +1,9 @@
+package com.cts.ms.location.bo;
+
+import java.util.List;
+
+public class LocationConfigBO {
+	
+	
+
+}
