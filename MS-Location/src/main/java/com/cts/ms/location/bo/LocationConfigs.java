@@ -16,6 +16,4 @@ public class LocationConfigs {
 	public void setLocations(ArrayList<LocationConfigBO> locations) {
 		this.locations = locations;
 	}
-	
-
 }

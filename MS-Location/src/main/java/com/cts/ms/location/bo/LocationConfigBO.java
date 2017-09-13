@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class LocationConfigBO {
 	
 	private String id;
-	private String description;
+	private String status;
 	public String getId() {
 		return id;
 	}
@@ -17,16 +17,20 @@ public class LocationConfigBO {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getDescription() {
-		return description;
+	public String getStatus() {
+		return status;
 	}
-	@XmlElement
-	public void setDescription(String description) {
-		this.description = description;
+	public void setStatus(String status) {
+		this.status = status;
 	}
-	
-	
-	
-	
+	public LocationConfigBO(String id, String status) {
+		super();
+		this.id = id;
+		this.status = status;
+	}
+	public LocationConfigBO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 }
