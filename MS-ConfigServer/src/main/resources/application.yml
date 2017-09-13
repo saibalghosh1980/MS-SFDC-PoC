@@ -6,8 +6,8 @@ spring:
     config:
       server:
         git:
-          #uri: D:/SKG/JAVA_DEVELOPMENT/SFDC-POC-DEV
-          uri: https://github.com/saibalghosh1980/MS-SFDC-PoC
+          uri: file://D:/SKG/JAVA_DEVELOPMENT/SFDC-POC-DEV
+          #uri: https://github.com/saibalghosh1980/MS-SFDC-PoC
           searchPaths: ALLCONFIG
 management:
   security:
