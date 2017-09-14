@@ -1,8 +1,6 @@
 package com.cts.ms.location.controller;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -17,14 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cts.ms.location.bl.LocationConfigBL;
 import com.cts.ms.location.bo.ExceptionBO;
-import com.cts.ms.location.bo.LocationConfigBO;
 import com.cts.ms.location.bo.LocationConfigs;
-import com.cts.ms.location.constants.LocationConfigStatus;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponses;
 import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 
 @RefreshScope
 @RestController

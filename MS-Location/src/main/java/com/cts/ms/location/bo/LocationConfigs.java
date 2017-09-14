@@ -6,8 +6,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "LOCATIONS")
 public class LocationConfigs {
-	
-	private ArrayList<LocationConfigBO> locations=new  ArrayList<LocationConfigBO>();
+
+	private ArrayList<LocationConfigBO> locations = new ArrayList<LocationConfigBO>();
 
 	public ArrayList<LocationConfigBO> getLocations() {
 		return locations;

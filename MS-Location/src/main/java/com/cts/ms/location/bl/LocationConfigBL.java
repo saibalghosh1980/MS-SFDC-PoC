@@ -20,7 +20,7 @@ public class LocationConfigBL {
 		ArrayList<LocationConfigBO> allConfigs = new ArrayList<LocationConfigBO>();
 		try {
 			locationConfigRepository.findAll()
-					.forEach(l -> allConfigs.add(new LocationConfigBO(l.getId(), l.getSattus())));			
+					.forEach(l -> allConfigs.add(new LocationConfigBO(l.getId(), l.getStatus())));
 		} catch (Exception ex) {
 			ex.printStackTrace();
 			throw ex;

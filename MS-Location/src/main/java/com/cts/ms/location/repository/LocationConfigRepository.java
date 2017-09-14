@@ -5,9 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.cts.ms.location.dao.Locationconfig;
 
-
-
 @Repository("springManagedLocationConfigRepository")
-public interface LocationConfigRepository extends JpaRepository<Locationconfig,String>{
+public interface LocationConfigRepository extends JpaRepository<Locationconfig, String> {
 
 }
