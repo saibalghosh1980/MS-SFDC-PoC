@@ -1,0 +1,5 @@
+package com.cts.ms.location.controller;
+
+public class LocationController {
+
+}

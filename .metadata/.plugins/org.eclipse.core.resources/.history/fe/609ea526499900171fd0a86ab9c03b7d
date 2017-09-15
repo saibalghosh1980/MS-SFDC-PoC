@@ -1,0 +1,15 @@
+package com.cts.ms.location.controller;
+
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import io.swagger.annotations.Api;
+
+@RefreshScope
+@RestController
+@RequestMapping("/location")
+@Api(value = "Location", description = "Operations pertaining to Location")
+public class LocationController {
+
+}

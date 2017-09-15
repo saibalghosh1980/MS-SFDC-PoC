@@ -1,0 +1,27 @@
+package com.cts.ms.enrollment.bl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+import com.cts.ms.enrollment.bo.EnrollmentBO;
+import com.cts.ms.enrollment.repository.EnrollmentRepository;
+
+public class EnrollmentBL {
+	
+	@Autowired
+	@Qualifier("springManagedEnrollmentRepository")
+	private EnrollmentRepository enrollmentRepo;
+	public List<EnrollmentBO> getEnrollmentDataForProcessing() throws Exception{
+		try
+		{
+			enrollmentRepo.findAll(example)
+		}
+		catch(Exception ex){
+			ex.printStackTrace();
+			throw ex;
+		}
+	}
+
+}

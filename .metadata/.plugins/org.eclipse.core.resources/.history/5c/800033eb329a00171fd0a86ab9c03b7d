@@ -1,0 +1,15 @@
+package com.cts.ms.enrollment.scheduler;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
+
+@Configuration
+@EnableScheduling
+public class EnrollmentScheduler {
+	@Scheduled(fixedRate = 2000)
+	public void runEnrollmentDataScheduler(){
+		System.out.println("RUNNING HERE");
+	}
+
+}

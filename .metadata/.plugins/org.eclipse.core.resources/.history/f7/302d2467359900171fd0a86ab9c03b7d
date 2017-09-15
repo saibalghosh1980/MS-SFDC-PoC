@@ -1,0 +1,5 @@
+package com.cts.ms.location.bo;
+
+public class MessageBO {
+
+}
