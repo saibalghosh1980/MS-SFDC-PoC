@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.cts.ms.location.bo.LocationConfigBO;
+import com.cts.ms.location.dao.Locationconfig;
 import com.cts.ms.location.repository.LocationConfigRepository;
 
 @Service("springManagedLocationConfigBL")
@@ -26,6 +27,20 @@ public class LocationConfigBL {
 			throw ex;
 		}
 		return allConfigs;
+	}
+
+	public LocationConfigBO getLocationConfigByLocationId(String id) throws Exception {
+		try {
+			if (locationConfigRepository.exists(id)) {
+				Locationconfig locationconfig = locationConfigRepository.findOne(id);
+				return new LocationConfigBO(locationconfig.getId(), locationconfig.getStatus());
+			} else
+				return null;
+
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			throw ex;
+		}
 	}
 
 }

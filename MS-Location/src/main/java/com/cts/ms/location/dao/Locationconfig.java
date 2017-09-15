@@ -26,7 +26,7 @@ public class Locationconfig implements java.io.Serializable {
 
 	@Id
 
-	@Column(name = "Id", unique = true, nullable = false, length = 100)
+	@Column(name = "LocationId", unique = true, nullable = false, length = 100)
 	public String getId() {
 		return this.id;
 	}
