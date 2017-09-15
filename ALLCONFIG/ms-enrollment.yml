@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    #url: jdbc:mysql://localhost:3306/sfdc-poc
+    url: jdbc:jdbcdslog:mysql://localhost:3306/sfdc-poc-enrollment;targetDriver=com.mysql.jdbc.Driver
+    username: root
+    password: root123
+    #driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: org.jdbcdslog.DriverLoggingProxy
+    tomcat:
+      max-active: 5
+      validation-query: select 1
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+---
+spring:
+  profiles: docker
+message:
+  greetings: Hello Dev
