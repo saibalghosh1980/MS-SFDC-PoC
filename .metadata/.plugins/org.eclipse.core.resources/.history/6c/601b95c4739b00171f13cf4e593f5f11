@@ -1,0 +1,5 @@
+package com.cts.ms.events.enrollment;
+
+public class EnrollmentPublishEvent {
+
+}

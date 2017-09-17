@@ -1,0 +1,8 @@
+package com.cts.ms.location.bl;
+
+import org.springframework.stereotype.Service;
+
+@Service("springManagedLocationBL")
+public class LocationBL {
+
+}

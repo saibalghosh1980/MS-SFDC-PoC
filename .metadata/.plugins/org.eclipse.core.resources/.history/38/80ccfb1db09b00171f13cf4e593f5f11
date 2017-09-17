@@ -1,0 +1,5 @@
+package com.cts.ms.enrollment.eventhandler;
+
+public class AssoicateLocationHandler {
+
+}

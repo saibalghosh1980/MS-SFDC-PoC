@@ -1,0 +1,10 @@
+server:
+  port: 8095
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: enrollment
+          group: enrollment-listeners-group
+          durableSubscription: true

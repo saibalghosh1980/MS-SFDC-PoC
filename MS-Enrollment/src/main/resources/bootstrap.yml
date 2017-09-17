@@ -4,6 +4,21 @@ spring:
   cloud:
     config:
       uri: http://localhost:8001
+    stream:
+      bindings:
+        input:
+          destination: EnrollmentQ
+          group: EnrollmentQ-listeners-group
+          durableSubscription: true
+        output:
+          destination: LocationQ
+          content-type: application/json
+          producer:
+            required-groups:
+            - LocationQ-listeners-group
+        kafka:
+          zkNodes: localhost
+          brokers: localhost
   application:
     name: ms-enrollment
 management:

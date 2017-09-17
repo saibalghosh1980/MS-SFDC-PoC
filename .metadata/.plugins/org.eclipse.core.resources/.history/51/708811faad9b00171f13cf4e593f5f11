@@ -1,0 +1,5 @@
+package com.cts.ms.events.location;
+
+public class LocationCreatedEvent {
+
+}

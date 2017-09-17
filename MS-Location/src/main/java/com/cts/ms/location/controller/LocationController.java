@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cts.ms.location.bo.ExceptionBO;
+import com.cts.ms.exception.bo.ExceptionBO;
 import com.cts.ms.location.bo.LocationBO;
 import com.cts.ms.location.bo.LocationConfigs;
 import com.cts.ms.location.bo.Locations;

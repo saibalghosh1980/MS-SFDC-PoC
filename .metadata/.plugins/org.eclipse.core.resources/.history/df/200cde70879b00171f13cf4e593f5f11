@@ -1,0 +1,8 @@
+package com.cts.ms.location.eventhandler;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class CreateLocationHandler {
+
+}

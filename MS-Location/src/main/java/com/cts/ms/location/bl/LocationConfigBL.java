@@ -2,6 +2,8 @@ package com.cts.ms.location.bl;
 
 import java.util.ArrayList;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -9,6 +11,7 @@ import org.springframework.stereotype.Service;
 import com.cts.ms.location.bo.LocationConfigBO;
 import com.cts.ms.location.dao.Locationconfig;
 import com.cts.ms.location.repository.LocationConfigRepository;
+import com.cts.util.ExceptionWrapper;
 
 @Service("springManagedLocationConfigBL")
 public class LocationConfigBL {
@@ -40,6 +43,21 @@ public class LocationConfigBL {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 			throw ex;
+		}
+	}
+	
+	@Transactional
+	public void addLocationConfig(LocationConfigBO locationConfigBO) throws Exception{
+		try
+		{
+			Locationconfig locationconfig=new Locationconfig();
+			locationconfig.setId(locationConfigBO.getId());
+			locationconfig.setStatus(locationConfigBO.getStatus());
+			locationConfigRepository.save(locationconfig);
+		}
+		catch(Exception ex)
+		{
+			throw new ExceptionWrapper(ex);
 		}
 	}
 

@@ -1,0 +1,5 @@
+package com.cts.ms.enrollment.service;
+
+public class EnrollmentEventService {
+
+}

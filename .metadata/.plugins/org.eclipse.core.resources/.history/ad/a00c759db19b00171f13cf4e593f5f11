@@ -1,0 +1,39 @@
+package com.cts.ms.enrollment.eventhandler;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.cloud.stream.annotation.StreamListener;
+import org.springframework.cloud.stream.messaging.Sink;
+import org.springframework.stereotype.Component;
+
+import com.cts.ms.enrollment.bl.EnrollmentBL;
+import com.cts.ms.events.location.LocationCreatedEvent;
+import com.cts.util.LoggingHelpUtil;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@EnableBinding(Sink.class)
+@Component
+public class AssoicateLocationHandler {
+
+	@Autowired
+	@Qualifier("springManagedEnrollmentBL")
+	private EnrollmentBL enrollmentBL;
+
+	@StreamListener(Sink.INPUT)
+	public void listenToLocationCreatedEvent(LocationCreatedEvent createdEvent) {
+		try {
+			LoggingHelpUtil.printDebug(
+					"-----------------------RECIEVED LOCATION CREATED EVENT------------------------------------------------");
+			LoggingHelpUtil.printDebug(
+					"-----------------------	CREATE ASSOCIATION WITH INFORMATION FROM EVENT------------------------------------------------"
+							+ new ObjectMapper().writeValueAsString(createdEvent));
+
+			enrollmentBL.associateEnrollmentWithLocation(createdEvent.getEnrollmentId(),
+					createdEvent.getLocationBO().getLocationId().toString());
+		} catch (Exception ex) {
+
+		}
+	}
+
+}

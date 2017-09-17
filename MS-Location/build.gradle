@@ -18,6 +18,7 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
+	maven { url "https://repository.jboss.org/nexus/content/groups/public" } 
 	mavenCentral()
 }
 
@@ -32,6 +33,7 @@ dependencies {
 	compile('org.springframework.cloud:spring-cloud-starter-eureka')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.springframework.cloud:spring-cloud-stream-binder-kafka')
 	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.6.1'
 	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
 	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.6.1'		
@@ -40,7 +42,8 @@ dependencies {
 	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
 	compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
 	// https://mvnrepository.com/artifact/com.googlecode.usc/jdbcdslog
-	compile group: 'com.googlecode.usc', name: 'jdbcdslog', version: '1.0.6.2'	
+	compile group: 'com.googlecode.usc', name: 'jdbcdslog', version: '1.0.6.2'
+	compile project(':common')	
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 

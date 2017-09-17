@@ -1,0 +1,38 @@
+package com.cts.ms.location.bl;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
+import com.cts.ms.location.bo.LocationBO;
+import com.cts.ms.location.dao.Location;
+import com.cts.ms.location.repository.LocationRepository;
+
+@Service("springManagedLocationBL")
+public class LocationBL {
+	
+	@Autowired
+	@Qualifier("springManagedLocationRepository")
+	private LocationRepository locationRepository;
+	
+	@Transactional
+	public void addLocation(LocationBO locationBO) throws Exception
+	{
+		try
+		{
+			Location location=new Location();
+			location.setAddressline1(locationBO.getAddressLine1());
+			location.setCity(locationBO.getCity());
+			location.setEnddate(locationBO.getEndDate());
+			location.setFullname(locationBO.getFullName());
+			location.setLoationid(locationBO.getLocationId().toString());
+			location.setStartdate(locationBO.getStartDate());
+		}
+		catch(Exception ex){
+			
+		}
+	}
+
+}

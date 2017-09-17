@@ -7,9 +7,10 @@
         <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.connection.password">root123</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sfdc-poc-enrollment</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sfdc-poc-location</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <mapping class="com.cts.ms.location.dao.Enrollment" />
+        <mapping class="com.cts.ms.location.dao.Locationconfig" />
+        <mapping class="com.cts.ms.location.dao.Location" />
     </session-factory>
 </hibernate-configuration>

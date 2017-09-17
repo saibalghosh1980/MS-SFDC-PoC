@@ -1,0 +1,24 @@
+package com.cts.ms.location.eventhandler;
+
+import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.cloud.stream.annotation.StreamListener;
+import org.springframework.cloud.stream.messaging.Sink;
+import org.springframework.integration.annotation.ServiceActivator;
+import org.springframework.stereotype.Component;
+
+import com.cts.ms.events.enrollment.EnrollmentPublishEvent;
+import com.cts.util.LoggingHelpUtil;
+
+@Component
+@EnableBinding(Sink.class)
+public class CreateLocationHandler {
+	
+	@StreamListener(Sink.INPUT)
+	public void listenToEnrollmentPublish(EnrollmentPublishEvent enrollmentPublishEvent) {
+		LoggingHelpUtil.printDebug("-----------------------RECIEVED ENROLLMENT PUBLISH EVENT------------------------------------------------");
+		LoggingHelpUtil.printDebug("-----------------------	CREATE LOCATION WITH INFORMATION FROM EVENT------------------------------------------------");
+		
+	}
+
+
+}

@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="springfox.documentation.builders.RequestHandlerSelectors"/>
-<fullyQualifiedTypeName name="springfox.documentation.spi.DocumentationType"/>
-<fullyQualifiedTypeName name="springfox.documentation.swagger2.annotations.EnableSwagger2"/>
-<fullyQualifiedTypeName name="com.cts.ms.location.bo.LocationConfigs"/>
-<fullyQualifiedTypeName name="com.cts.ms.location.constants.LocationConfigStatus"/>
-<fullyQualifiedTypeName name="javax.persistence.NamedQuery"/>
-<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.config.JpaRepositoryConfigExtension"/>
 <fullyQualifiedTypeName name="com.cts.ms.location.dao.LocationConfig"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.Primary"/>
 <fullyQualifiedTypeName name="org.springframework.boot.context.properties.ConfigurationProperties"/>
@@ -49,15 +41,23 @@
 <fullyQualifiedTypeName name="com.cts.ms.enrollment.util.EnrolllmentStatus"/>
 <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
-<fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
 <fullyQualifiedTypeName name="org.springframework.scheduling.annotation.EnableScheduling"/>
 <fullyQualifiedTypeName name="org.springframework.scheduling.annotation.Scheduled"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
 <fullyQualifiedTypeName name="javax.persistence.Table"/>
 <fullyQualifiedTypeName name="com.cts.ms.enrollment.bl.EnrollmentBL"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="com.cts.util.LoggingHelpUtil"/>
 <fullyQualifiedTypeName name="com.cts.util.ExceptionWrapper"/>
 <fullyQualifiedTypeName name="org.springframework.data.repository.query.Param"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+<fullyQualifiedTypeName name="javax.xml.transform.Source"/>
+<fullyQualifiedTypeName name="org.springframework.messaging.support.MessageBuilder"/>
+<fullyQualifiedTypeName name="org.springframework.cloud.stream.messaging.Source"/>
+<fullyQualifiedTypeName name="com.cts.ms.enrollment.util.MessagePublisher"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.cloud.stream.annotation.EnableBinding"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+<fullyQualifiedTypeName name="org.springframework.integration.annotation.ServiceActivator"/>
+<fullyQualifiedTypeName name="org.springframework.cloud.stream.messaging.Sink"/>
 </qualifiedTypeNameHistroy>

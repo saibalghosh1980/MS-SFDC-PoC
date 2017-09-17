@@ -1,0 +1,12 @@
+package com.cts.ms.enrollment.service;
+
+import javax.xml.transform.Source;
+
+import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@EnableBinding(Source.class)
+public class EnrollmentEventService {
+
+}

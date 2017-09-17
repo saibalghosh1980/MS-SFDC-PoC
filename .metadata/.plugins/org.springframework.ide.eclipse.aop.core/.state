@@ -2,4 +2,5 @@
 <aop-reference-model>
 <aop-project name="MS-EurekaServer"/>
 <aop-project name="MS-ConfigServer"/>
+<aop-project name="TestConsumer"/>
 </aop-reference-model>

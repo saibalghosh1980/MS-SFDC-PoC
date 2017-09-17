@@ -1,0 +1,11 @@
+package com.cts.ms.enrollment.eventhandler;
+
+import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.cloud.stream.messaging.Sink;
+import org.springframework.stereotype.Component;
+
+@EnableBinding(Sink.class)
+@Component
+public class AssoicateLocationHandler {
+
+}

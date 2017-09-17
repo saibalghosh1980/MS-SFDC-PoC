@@ -1,0 +1,23 @@
+server:
+  port: 8003 
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8001
+    stream:
+      bindings:
+        output:
+          destination: enrollment
+          content-type: 'application/json'
+        kafka:
+          zkNodes: localhost
+          brokers: localhost
+  application:
+    name: ms-enrollment
+management:
+  security:
+    enabled: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

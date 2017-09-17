@@ -1,0 +1,9 @@
+package com.cts.ms.location.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.cts.ms.location.dao.Location;
+
+public interface LocationRepository extends JpaRepository<Location, String> {
+
+}

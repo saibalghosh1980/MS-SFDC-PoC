@@ -1,0 +1,11 @@
+package snippet;
+
+public class Snippet {
+	stream:
+	      bindings:
+	        input:
+	          destination: LocationQ
+	          group: LocationQ-listeners-group
+	          durableSubscription: true
+}
+
