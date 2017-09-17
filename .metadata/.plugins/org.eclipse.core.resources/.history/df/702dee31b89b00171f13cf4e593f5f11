@@ -40,7 +40,7 @@ public class EnrollmentScheduler {
 			allEnrollments.forEach(enrollment -> {
 				messagepublisher.publishMessage(new EnrollmentPublishEvent(enrollment));
 				try {
-					enrollmentBL.updateEnrollment(enrollment);
+					//enrollmentBL.updateEnrollment(enrollment);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					new ExceptionWrapper(e);

@@ -1,0 +1,13 @@
+application:
+  name: eureka-server
+management:
+  security:
+    enabled: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registerWithEureka: false
+    fetchRegistry: false
+custom:
+    value: Saibal Ghosh

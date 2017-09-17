@@ -61,7 +61,6 @@ public class EnrollmentBL {
 		try {
 			Enrollment enrollment = enrollmentRepo.getOne(enrollmentId);
 			enrollment.setLocationid(locationId);
-			enrollment.setStatus(EnrolllmentStatus.PROCESSED.toString());
 			enrollmentRepo.save(enrollment);
 		} catch (Exception ex) {
 			throw new ExceptionWrapper(ex);
